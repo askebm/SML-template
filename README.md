@@ -2,7 +2,7 @@
 
 ## Compiling the document
 ``` bash
-latexmk -lualatex -shell-escape template.tex
+latexmk -lualatex -shell-escape example.tex
 ```
 
 ## Documentation
