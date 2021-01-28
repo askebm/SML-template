@@ -1,0 +1,41 @@
+% !TEX program = lualatex
+\documentclass[a4paper]{article}
+
+\usepackage[headheight=14pt, top=0.5cm, bottom=0.5cm, left=.5cm, right=.5cm]{geometry}
+
+\usepackage{fontspec}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+
+\usepackage[outputdir=build]{minted}
+\usepackage{minted}
+\setminted{breaklines=true,frame=lines,obeytabs=true,tabsize=2}
+\setmintedinline{breaklines}
+
+
+\usepackage{pythontex}
+\setpythontexlistingenv{lllisting}
+\begin{pythontexcustomcode}{py}
+from past.builtins import execfile
+\end{pythontexcustomcode}
+
+
+\setpythontexoutputdir{.}
+\setpythontexworkingdir{..}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+Hello
+
+
+\begin{pyblock}
+1+1
+print("hello")
+\end{pyblock}
+
+\end{document}
