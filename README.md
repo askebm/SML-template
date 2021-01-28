@@ -6,5 +6,5 @@ latexmk -lualatex -shell-escape template.tex
 ```
 
 ## Documentation
-(Pythontex)[https://www.ctan.org/pkg/pythontex]
+[Pythontex](https://www.ctan.org/pkg/pythontex)
 
