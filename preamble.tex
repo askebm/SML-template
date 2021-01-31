@@ -6,6 +6,8 @@
 \setdefaultlanguage{english}
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
+\usepackage{pgf}
+\usepackage{import}
 
 \usepackage[outputdir=build]{minted}
 \usepackage{minted}
@@ -17,6 +19,12 @@
 \setpythontexlistingenv{lllisting}
 \begin{pythontexcustomcode}{py}
 from past.builtins import execfile
+import numpy as np
+import scipy as sp
+import scipy.io as sio
+import scipy.stats as ss
+import pandas as pd
+import matplotlib.pyplot as plt
 \end{pythontexcustomcode}
 
 

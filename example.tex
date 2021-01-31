@@ -11,12 +11,6 @@ a = 1+1
 print("a = ",a)
 \end{pycode}
 
-pysub
-\begin{pysub}
-a = 1+1
-print("a = ",a)
-\end{pysub}
-
 pyblock
 \begin{pyblock}
 a = 1+1
@@ -28,5 +22,24 @@ pyconsole
 a = 1+1
 print("a = ",a)
 \end{pyconsole}
+
+\section{Plotting}%
+\label{sec:plotting}
+
+
+
+\begin{pycode}
+x = np.linspace(0,8)
+y = np.sin(x)
+plt.plot(x,y)
+plt.savefig('plot/test.pgf')
+print(r"""
+\begin{figure}[ht]
+	\centering
+	\import{plot}{test.pgf}
+\end{figure} """)
+print("Executed")
+\end{pycode}
+
 
 \end{document}
