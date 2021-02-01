@@ -18,13 +18,36 @@
 \usepackage{pythontex}
 \setpythontexlistingenv{lllisting}
 \begin{pythontexcustomcode}{py}
-from past.builtins import execfile
 import numpy as np
 import scipy as sp
 import scipy.io as sio
 import scipy.stats as ss
 import pandas as pd
 import matplotlib.pyplot as plt
+
+class figure(object):
+	def __init__(self,fig=None):
+		if fig == None :
+			self.fig = plt.gcf()
+		else :
+			self.fig = fig
+		self.caption = ""
+		self.label = ""
+		self.before = ""
+		self.after = ""
+	def plot(self):
+		print(r"""
+		\begin{figure}[ht]
+			\centering
+			""",self.before)
+		self.fig.savefig(sys.stdout,format='pgf')
+		print(self.after,r"""
+			\caption{""",self.caption,r"""}%
+			\label{fig:""",self.label,r"""}
+		\end{figure}
+		""")
+
+
 \end{pythontexcustomcode}
 
 
