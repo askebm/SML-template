@@ -37,9 +37,24 @@ print(r"""
 \begin{figure}[ht]
 	\centering
 	\import{plot}{test.pgf}
+	\caption{I am saved in a file}
 \end{figure} """)
 print("Executed")
 \end{pycode}
 
+\begin{pycode}
+import sys
+x = np.linspace(0,8)
+y = np.sin(x)
+plt.plot(x,y)
+print(r"""
+\begin{figure}[ht]
+	\centering""" )
+plt.savefig(sys.stdout,format='pgf')
+print(r"""
+\caption{I am purely rendered}
+\end{figure} """)
+print("Executed")
+\end{pycode}
 
 \end{document}
