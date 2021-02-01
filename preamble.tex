@@ -18,6 +18,7 @@
 \usepackage{pythontex}
 \setpythontexlistingenv{lllisting}
 \begin{pythontexcustomcode}{py}
+from past.builtins import execfile
 import numpy as np
 import scipy as sp
 import scipy.io as sio
@@ -46,6 +47,7 @@ class figure(object):
 			\label{fig:""",self.label,r"""}
 		\end{figure}
 		""")
+		plt.close(self.fig)
 
 
 \end{pythontexcustomcode}
