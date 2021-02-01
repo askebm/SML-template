@@ -29,3 +29,15 @@ git pull
 git checkout assignment_1
 git rebase master
 ```
+
+## Vim
+If you are very dependent on the file type for autocompletions and such, you can add the folowing to your vimrc
+to manually change the filetype between python and tex
+
+``` vimscript
+augroup SML
+	"_Change _Filetype
+	autocmd FileType python nnoremap <buffer> <leader>cf :set filetype=tex<CR>
+	autocmd FileType tex nnoremap <buffer> <leader>cf :set filetype=python<CR>
+augroup end
+```
